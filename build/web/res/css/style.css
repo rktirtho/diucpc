@@ -8,6 +8,18 @@ and open the template in the editor.
     Author     : rktirtho
 */
 
+.my-0{
+    margin-bottom: 0px
+}
+.py-0{
+    padding-bottom: 0px; 
+    
+    
+}
+.mx-auto{
+    text-align: center
+}
+
 .btn{
     padding: 5px;
     border: 1px solid;

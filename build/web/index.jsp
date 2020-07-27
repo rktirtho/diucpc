@@ -8,12 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JSP Page</title>
+        <title>Computer and Programming Club</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="res/css/style.css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h2 class="py-0 my-0 mx-auto">Dhaka International University</h2>
+        <h1 class="py-0, my-0 mx-auto">Computer and Programming Club</h1>
+        <hr>
         
         <a href="member-registration.jsp"class="btn btn-success">Member Registration</a>
     </body>
