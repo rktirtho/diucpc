@@ -4,7 +4,9 @@
     Author     : rktirtho
 --%>
 
+<%@page import="com.diucpc.students.Student"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 
 <!DOCTYPE html>
 <html>
@@ -15,16 +17,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            String name = request.getParameter("name");
-            String fName = request.getParameter("fName");
-            String mName = request.getParameter("mName");
-            String address = request.getParameter("address");
-            String gender = request.getParameter("gender");
-            String department = request.getParameter("department");
-            String shift = request.getParameter("shift");
-            String roll = request.getParameter("roll");
-            String reg = request.getParameter("reg");
+         <%
+            Student student = new Student();
+            student.setName(request.getParameter("name"));
+            student.setfName(request.getParameter("fName"));
+            student.setmName(request.getParameter("mName"));
+            student.setAddress(request.getParameter("address"));
+            student.setGender(request.getParameter("gender"));
+            student.setDepartment(request.getParameter("department"));
+            student.setShift(request.getParameter("shift"));
+            student.setRoll(request.getParameter("roll"));
+            student.setReg(request.getParameter("reg"));
 
 
         %>
@@ -35,39 +38,39 @@
                 <table border='1'>
                     <tr>
                         <td><h3>Name</h3></td>
-                        <td><%= name%></td>
+                        <td><%= student.getName()%></td>
                     </tr>
                     <tr>
                         <td><h3>Father's Name</h3></td>
-                        <td><%= fName%></td>
+                        <td><%= student.getfName()%></td>
                     </tr>
                     <tr>
                         <td><h3>Mother's Name</h3></td>
-                        <td><%= mName%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Address</h3></td>
-                        <td><%= address%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Gender</h3></td>
-                        <td><%= gender%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Department</h3></td>
-                        <td><%= department%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Shift</h3></td>
-                        <td><%= shift%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Roll</h3></td>
-                        <td><%= roll%></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <td><h3>Reg. No.</h3></td>
-                        <td><%= reg%></td>
+                        <td></td>
                     </tr>
                 </table>
             </center>

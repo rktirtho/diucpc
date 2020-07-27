@@ -26,7 +26,8 @@
                         </tr>
                         <tr>
                             <td>Father's Name</td>
-                            <td><input class="single" type="" name="fName" /></td>
+                            <td>
+                                <input class="single" type="" name="fName" /></td>
                         </tr>
                         <tr>
                             <td>Mother's Name</td>
