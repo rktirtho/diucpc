@@ -4,6 +4,7 @@
     Author     : rktirtho
 --%>
 
+<%@page import="com.diucpc.dao.ApplicationDBHelper"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean  id="student"  class="com.diucpc.students.Student"/>
 <jsp:setProperty name="student" property="*"/>
@@ -19,47 +20,16 @@
     <body>
         
         <div class="container">
-            <center>
-                <h2>My Application Form</h2>
-                <table border='1'>
-                    <tr>
-                        <td><h3>Name</h3></td>
-                        <td><% out.print(student.getName());%></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Father's Name</h3></td>
-                        <td><%= student.getfName()%></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Mother's Name</h3></td>
-                        <td><%= student.getmName()%></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Address</h3></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Gender</h3></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Department</h3></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Shift</h3></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Roll</h3></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><h3>Reg. No.</h3></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </center>
+            <%
+                ApplicationDBHelper bHelper = new ApplicationDBHelper();
+                boolean status= bHelper.insertApplication(student);
+                if (status) {
+                        out.print("<h2>Successfully Inserted</h2>");
+                    }else{
+                    out.print("<h2 style=\"color:red\">Error</h2>");
+                }
+
+            %>
         </div>
     </body>
 
